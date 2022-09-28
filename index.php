@@ -1,49 +1,5 @@
-<?php
-
-function isDelay($time) {
-    $hour = intval( substr($time, 0, 2) );
-
-    if ($hour >= 20) {
-        die('nemozne');
-    }
-    else if ($hour >= 8) {
-        return true;
-    }
-    else {
-        return false;
-    }
-} 
-
-function writeArrival($time, $delay) {
-    $WriteFile = fopen('data/prichody.txt', 'a');
-
-    if ($delay) {
-        $text = "\n" . $time . ', meskanie;';
-    }
-    else {
-        $text = "\n" . $time . ';';
-    }
-
-    fwrite($WriteFile, $text);
-    fclose($WriteFile);
-}
-
-function outputArrivalFile() {
-    $readFile = fopen('data/prichody.txt', 'r');
-       
-    $data = explode(';', fread( $readFile, filesize('data/prichody.txt') ) );
-
-    for ($i=0; $i < count($data); $i++) { 
-        echo "<li> $data[$i] </li>";
-    }
-
-    fclose($readFile);
-}
-
-$arrivalTime = date('H:i:s');
-$arrivalDateTime = date('d.m.Y H:i:s');
-$delay = isDelay($arrivalTime);
-writeArrival($arrivalDateTime, $delay);
+<?php 
+include 'assets/functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -60,13 +16,19 @@ writeArrival($arrivalDateTime, $delay);
 </head>
 <body>
 
-    <main class="container"> 
+    <main class="container">
         
     <?php
     echo '<h2> Ahoj </h2>';
-    
-    echo "<h3> Cas tvojho prichodu $arrivalTime </h3>";
     ?>
+
+    <form class="form-group" action="prichod.php" method="post">
+        <label>
+            <input class="form-control" type="text" name="studentName" id="">
+        </label>
+
+        <input class="btn btn-sm btn-danger" type="submit" value="zaznamenaj prichod">
+    </form>
 
     <ul class="list-group">
         <?php 

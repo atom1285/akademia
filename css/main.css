@@ -12,6 +12,26 @@ li {
 	display: block;
 }
 
+ul {
+	margin-top: 50px;
+}
+
+pre {
+	background-color: white;
+	color: black;
+	margin: 25px;
+}
+
+.json_output {
+	width: 50%;
+	font-size: medium;
+}
+
+.red {
+	background-color: rgb(252, 71, 71);
+}
+
+
 /* #add-form {
 	position: relative;
 	padding: 15px;
@@ -153,10 +173,6 @@ body > .alert {
 
 .even-item {
 	background: #2c2c2c;
-}
-
-.red {
-	background-color: rgb(252, 71, 71);
 }
 
 .orange {
