@@ -1,0 +1,185 @@
+body {
+	color: #FFFFFF;
+	background-color: #222222;
+}
+
+.container {
+	margin: auto;
+	padding: 18px;
+}
+
+li {
+	display: block;
+}
+
+/* #add-form {
+	position: relative;
+	padding: 15px;
+}
+
+.extra {
+	padding: 15px 0;
+}
+
+.extra label {
+	padding: 3px 0;
+} 
+
+.modal {
+	color:#222222;
+}
+
+#back-btn {
+	text-decoration: none;
+	margin: 0 0 10px 0;
+	padding: 5px 15px 5px 10px;
+	display: inline-block;
+	background-color: orange;
+	color: black;
+}
+
+.list-group-item:hover label {
+	cursor: pointer;
+}
+
+.tool-btn  {
+	background-color: #303030;
+	border: none;
+	float: right;
+	text-align: right;
+	height: 24px;
+	padding: 1px 10px;
+	transition: 0.5s;
+}
+
+.even-item button{
+	background-color: #2c2c2c;
+}
+
+.list-group-item .tool-btn{
+	transition: 1s;
+}
+
+.list-group-item:hover .tool-btn {
+	background-color: #555353;
+}
+
+.tool-btn:hover {
+	font-size: 25px;
+}
+
+.edit-btn {
+	color: orange;
+}
+
+.cmplt-btn {
+	color: greenyellow;	
+}
+
+.info-btn {
+	background-color: #303030;
+	border: none;
+	text-align: center;
+	height: 24px;
+	padding: 1px 10px;
+	transition: 0.5s;
+	color: white;
+}
+
+.list-group-item:hover .info-btn {
+	background-color: #555353;
+}
+
+.btn-submit {
+	transition: 0.5s;
+}
+
+.btn-submit:hover {
+	font-size: 15px;
+}
+
+.list-group-item {
+	transition: 0.6s;
+	color: white;
+	background-color: #303030;
+}
+
+.list-group-item:hover {
+	background-color: #555353;
+	font-weight: 700;
+	padding-left: 30px;
+}
+
+.debugMessage {
+	text-decoration: none;
+}
+
+#debug-item-list {
+	list-style-type: none;
+}
+
+.controls a {
+	font-size: 13px;
+	margin-left: 8px;
+	text-decoration: none;
+}
+
+.div-form label{
+	transition: 1.5s;
+	margin: 0 8px;
+}
+
+.entry {
+	margin: 4px -6px;
+}
+
+h1 {
+	margin: 15px 0;
+}
+
+.delete-link {
+	position: relative;
+	top: 2px; 
+}
+
+.even {
+	background: #2c2c2c;
+}
+
+header .alert,
+body > .alert {
+	margin-top: 35px;
+}
+
+.even-item {
+	background: #2c2c2c;
+}
+
+.red {
+	background-color: rgb(252, 71, 71);
+}
+
+.orange {
+	background-color: orange;
+}
+
+.yellow {
+	background-color: yellow;
+	color: #2c2c2c;
+}
+
+.blue {
+	background-color: lightskyblue;
+}
+
+.green {
+	background-color: greenyellow;
+}
+
+.purple {
+	background-color: violet;
+}
+
+pre {
+	border: none;
+} */
