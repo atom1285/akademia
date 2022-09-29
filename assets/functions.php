@@ -37,9 +37,9 @@ function writeArrivalToTXT($name, $time, $delay) {
 }
 
 function getJSONFileContents($fileName) {
-    $readFile = fopen("data/$fileName.json", 'r');
-    $jsonContents = fread($readFile, filesize("data/$fileName.json"));
-    fclose($readFile);
+    // $readFile = fopen("data/$fileName.json", 'r');
+    $jsonContents = file_get_contents("data/$fileName.json");
+    // fclose($readFile);
 
     return $jsonContents;
 }
@@ -148,15 +148,11 @@ function preiterateArrivalsJSON() {
 }
 
 function outputArrivalFile() {
-    $readFile = fopen('data/prichody.txt', 'r');
-       
-    $data = explode(';', fread( $readFile, filesize('data/prichody.txt') ) );
+    $data = explode(';',  file_get_contents('data/prichody.txt'));
 
     for ($i=0; $i < count($data); $i++) { 
         echo "<li> $data[$i] </li>";
     }
-
-    fclose($readFile);
 }
 
 function getInput() {
