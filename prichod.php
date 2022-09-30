@@ -13,7 +13,7 @@ include 'assets/functions.php';
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
     
-    <title>Document</title>
+    <title>Tvoj prichod</title>
 </head>
 <body>
     <main class="container">
@@ -39,7 +39,7 @@ include 'assets/functions.php';
     <div class = "json_output">
         <?php 
             echo "<pre>";
-            print_r (json_decode( getJSONFileContents('students') ));
+            print_r (json_decode( getJSONFileContents('students') ), true);
             echo "</pre>";
 
             preiterateArrivalsJSON();
