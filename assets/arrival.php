@@ -16,6 +16,7 @@ class Arrival {
             $id = count($array) + 1;
 
             array_push($array, ['id' => $id, 'time' => $this->time]);
+
             $data['arrivals'] = $array;
 
             $jsonToWrite = json_encode($data, JSON_PRETTY_PRINT);

@@ -1,5 +1,4 @@
 <?php
-
 include 'assets/functions.php';
 ?>
 
@@ -18,32 +17,38 @@ include 'assets/functions.php';
 <body>
     <main class="container">
 
-    <?php
-    $name = getInput();
-    $arrivalTime = date('H:i:s');
-    $arrivalDateTime = date('d.m.Y H:i:s');
-    $delay = isDelay($arrivalTime);
-    writeArrival($name, $arrivalDateTime, $delay);
+    <div class="row">
+        <div class="col-4"></div>
+            <div class="col-4">
+            <?php
+            $name = getInput();
+            $arrivalTime = date('H:i:s');
+            $arrivalDateTime = date('d.m.Y H:i:s');
+            $delay = isDelay($arrivalTime);
+            writeArrival($name, $arrivalDateTime, $delay);
 
-    echo "<h2> Ahoj $name</h2>";
-    echo "<h3> Cas tvojho prichodu $arrivalTime </h3>";
+            echo "<h2> Ahoj $name</h2>";
+            echo "<h3> Cas tvojho prichodu $arrivalTime </h3>";
 
-    ?>
+            ?>
 
-    <ul class="list-group">
-        <?php 
-            outputArrivalFile();
-        ?>
-    </ul>
+            <ul class="list-group">
+                <?php
+                    outputArrivalFile();
+                ?>
+            </ul>
 
-    <div class = "json_output">
-        <?php 
-            echo "<pre>";
-            print_r (json_decode( getJSONFileContents('students') ), true);
-            echo "</pre>";
+            <div class = "json_output">
+                <?php
+                    echo "<pre>";
+                    echo 'here';
+                    print_r (json_decode( getJSONFileContents('data/students.json') ), true);
+                    echo "</pre>";
 
-            preiterateArrivalsJSON();
-        ?>
+                    preiterateArrivalsJSON();
+                ?>
+            </div>
+        </div>
     </div>
 
     </main>

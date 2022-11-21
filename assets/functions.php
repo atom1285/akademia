@@ -41,8 +41,7 @@ function writeArrivalToTXT($name, $time, $delay) {
 }
 
 function getJSONFileContents($fileName) {
-    $jsonContents = file_get_contents("data/$fileName.json");
-    return $jsonContents;
+    return file_get_contents("data/$fileName.json");
 }
 
 function writeArrivalToStudentsJSON($name, $time, $delay) {
@@ -52,7 +51,6 @@ function writeArrivalToStudentsJSON($name, $time, $delay) {
     $newArrival->time = $time;
     $newArrival->delay = $delay;
 
-    
     $jsonContents = getJSONFileContents('students');
 
     $newArrival->write($jsonContents);

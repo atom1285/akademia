@@ -8,7 +8,7 @@ class studentArrival {
 
     public function write($json) {
           
-        if ($json == false) {
+        if (!$json) {
             $data = ['students' => [['id' => 1, 'name' => $this->name, 'time' => $this->time, 'delay' => $this->delay]] ];
             $jsonToWrite = json_encode($data, JSON_PRETTY_PRINT);
         }
